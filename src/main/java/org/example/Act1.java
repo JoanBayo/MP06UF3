@@ -4,7 +4,7 @@ import java.sql.*;
 import java.text.MessageFormat;
 import java.util.Scanner;
 
-public class Main {
+public class Act1 {
 
     public static Connection conexio() throws SQLException {
         Connection con = null;
