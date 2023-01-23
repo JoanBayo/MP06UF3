@@ -137,7 +137,18 @@ public class Main {
 
     private static void llistarPerPreu() {
         try {
-            String sentenciaSQL = "SELECT * from productes ORDER BY preu;";
+            String ascDesc = "asc";
+            Scanner teclat = new Scanner(System.in);
+            System.out.print("Vols ordenar de forma ascendent o descendent?" +
+                    "\n1 -Ascendent" +
+                    "\n2- Descendent" +
+                    "\nSelecciona una opció: ");
+            int ordre = teclat.nextInt();
+            if (ordre == 2) {
+                ascDesc = "desc";
+            }
+            System.out.println("Aquesta resposta no és possible, serà ordenat de forma ascendent\n");
+            String sentenciaSQL = "SELECT * from productes ORDER BY preu " + ascDesc  +";";
             Connection con = conexio();
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sentenciaSQL);
@@ -160,7 +171,18 @@ public class Main {
 
     private static void llistarPerNom() {
         try {
-            String sentenciaSQL = "SELECT * from productes ORDER BY nom;";
+            String ascDesc = "asc";
+            Scanner teclat = new Scanner(System.in);
+            System.out.print("Vols ordenar de forma ascendent o descendent?" +
+                    "\n1 -Ascendent" +
+                    "\n2- Descendent" +
+                    "\nSelecciona una opció: ");
+            int ordre = teclat.nextInt();
+            if (ordre == 2) {
+                ascDesc = "desc";
+            }
+            System.out.println("Aquesta resposta no és possible, serà ordenat de forma ascendent\n");
+            String sentenciaSQL = "SELECT * from productes ORDER BY nom " + ascDesc  +";";
             Connection con = conexio();
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sentenciaSQL);
@@ -183,7 +205,18 @@ public class Main {
 
     private static void llistarPerId() {
         try {
-            String sentenciaSQL = "SELECT * from productes ORDER BY idProducte;";
+            String ascDesc = "asc";
+            Scanner teclat = new Scanner(System.in);
+            System.out.print("Vols ordenar de forma ascendent o descendent?" +
+                    "\n1 -Ascendent" +
+                    "\n2- Descendent" +
+                    "\nSelecciona una opció: ");
+            int ordre = teclat.nextInt();
+            if (ordre == 2) {
+                ascDesc = "desc";
+            }
+            System.out.println("Aquesta resposta no és possible, serà ordenat de forma ascendent\n");
+            String sentenciaSQL = "SELECT * from productes ORDER BY idProducte " + ascDesc  +";";
             Connection con = conexio();
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sentenciaSQL);
