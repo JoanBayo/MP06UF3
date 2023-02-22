@@ -82,7 +82,7 @@ public class Act1 {
     private static void llistaproductes() {
         Scanner teclat = new Scanner(System.in);
         while(true) {
-            System.out.print("Aquestes són les opcions a llistar:" +
+            System.out.print("\nAquestes són les opcions a llistar:" +
                     "\n1- Ordenats per ID" +
                     "\n2- Ordenats per nom" +
                     "\n3- Ordenats per preu" +
@@ -112,7 +112,7 @@ public class Act1 {
     private static void llistaPerContingut() {
         try {
             Scanner teclat = new Scanner(System.in);
-            System.out.println("Que a de incloure el producte (zz = Pizza");
+            System.out.println("Que a de incloure el producte (zz = Pizza)");
             String contingut = teclat.next();
             String sentenciaSQL = "SELECT * from productes where nom like '%" + contingut + "%';";
             Connection con = conexio();
@@ -272,7 +272,7 @@ public class Act1 {
         System.out.print("-Nom: ");
         String nom = teclat.next();
         System.out.print("-Preu: ");
-        int preu = teclat.nextInt();
+        float preu = teclat.nextFloat();
         String sentenciaSQL = "UPDATE productes" +
                 " SET nom = '" + nom +"',"+
                 " preu = " + preu +
@@ -296,7 +296,7 @@ public class Act1 {
             System.out.print("-Nom: ");
             String nom = teclat.nextLine();
             System.out.print("-Preu: ");
-            int preu = teclat.nextInt();
+            float preu = teclat.nextFloat();
             String sentenciaSQL = "INSERT INTO productes(nom,preu)" +
                     " VALUES('" + nom + "'," + preu + ")";
                 con = conexio();
